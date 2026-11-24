@@ -1,0 +1,32 @@
+ANONIMIZADOR LOCAL
+
+Qué es: una app que corre solo en tu computador y cambia datos sensibles por marcadores
+([PERSONA_1], [CUENTA_1]...). Lee .txt, .docx y .pdf. Nada sale a internet.
+
+PARA USARLO EN OTRO PC (USB)
+  La carpeta USB\ tiene todo lo necesario. Cópiala a la memoria y lee USB\LEEME.txt.
+  En el otro PC no hace falta instalar Python.
+
+PARA VOLVER A GENERAR LA CARPETA USB (después de cambiar el código)
+  Doble clic en empaquetar.bat (necesita Python 3.9+ en este PC y conexión a internet la primera vez).
+  Corre las pruebas, genera Anonimizador.exe y arma la carpeta USB\.
+
+PARA USARLO DESDE EL CÓDIGO
+  python app.py      (para PDF hace falta:  pip install pymupdf)
+  Se abre el navegador con la app.
+
+Qué detecta: firmas en PDF (imagen escaneada, trazo de lápiz digital y campos de firma digital), correos, NIT, cédulas, teléfonos, radicados, valores en pesos, nombres de personas,
+direcciones (Calle, Carrera, Av., Diagonal, Transversal, AK/AC, apto, torre, barrio, manzana/casa,
+vereda, km vía, y lo que siga a «Dirección:» o «Domicilio:») y cuentas bancarias (ahorros, corriente,
+bancos colombianos, Nequi/Daviplata, IBAN y tarjetas de crédito/débito validadas con Luhn).
+
+PDF: genera un PDF nuevo donde los datos se BORRAN del archivo (no solo se tapan) y se escribe el
+marcador encima. También quita metadatos (autor, título), adjuntos, enlaces y JavaScript.
+Un PDF escaneado no tiene texto: primero hay que pasarlo por OCR.
+
+Límites (importante)
+- No es infalible. Puede dejar pasar un dato o marcar de más. Revisa siempre el resultado.
+- El mapa (.json) guarda los datos reales. Guárdalo en tu equipo y no lo compartas.
+
+Pruebas:  python prueba.py   y   python prueba_pdf.py
+Archivos: anonimizador.py (detección), pdf_anon.py (PDF), app.py (interfaz), empaquetado\ (icono e instalador USB)

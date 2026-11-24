@@ -1,0 +1,56 @@
+ANONIMIZADOR LOCAL - versión portable para USB
+
+Funciona en cualquier PC con Windows 10 u 11 (64 bits). No hay que instalar Python ni nada más.
+Todo ocurre en el computador: ningún documento sale a internet.
+
+OPCIÓN A - Usarlo directo desde la USB
+  Doble clic en Anonimizador.exe. Se abre el navegador con la app.
+
+OPCIÓN B - Dejar el icono en el Escritorio de ese PC (recomendado si lo usarás seguido)
+  Doble clic en "Instalar acceso directo en este PC.bat".
+  Copia el programa al PC y crea el icono "Anonimizador" en el Escritorio.
+  Después puedes retirar la USB y abrir la app desde ese icono.
+  No necesita permisos de administrador.
+  (Un acceso directo que apunte a la USB no sirve: Windows le cambia la letra a la USB
+  en cada PC, por eso se copia el programa.)
+
+PRIMERA VEZ EN UN PC
+  Windows puede mostrar "Windows protegió su PC" porque el programa no está firmado.
+  Pulsa "Más información" y luego "Ejecutar de todas formas". Es normal en programas propios.
+  El primer arranque tarda unos segundos; los siguientes son más rápidos.
+
+CÓMO SE USA
+  1. Arrastra el documento (.pdf, .docx o .txt) a la zona punteada, o haz clic en ella para buscarlo.
+     También puedes pulsar "Prefiero pegar un texto".
+  2. Marca lo que quieres ocultar (vienen todos marcados) y pulsa "Anonimizar documento".
+  3. Revisa la vista previa y pulsa "Descargar PDF anonimizado". En la pestaña "Texto anonimizado"
+     lo ocultado aparece resaltado en amarillo.
+  Para salir: botón "Cerrar la app". Si solo cierras la pestaña, la app se apaga sola a los 5 minutos.
+
+  ¿UNA FIRMA NO SE BORRÓ?  Abre "Opciones avanzadas" y activa "Borrar todas las imágenes del PDF".
+  Así se borran todas las imágenes (también logos y fotos) y quedan marcadas como [IMAGEN_1].
+
+QUÉ DETECTA
+  Firmas en el PDF, junto a palabras como "Firma", "Firma y sello", "Firmado", "Signature",
+  "Signed", "Atentamente", "Revisó", "Aprobó", "Vo.Bo." o una raya de firma (_____), arriba,
+  abajo o al lado de la firma:
+    - la firma escaneada o el sello (imagen),
+    - la firma hecha con lápiz digital o tableta (trazo),
+    - la firma puesta con "Rellenar y firmar" de Adobe o Vista previa de Mac (anotación),
+    - los campos de firma digital.
+  Se borran y queda un recuadro [FIRMA_1]. Los logos del membrete se conservan.
+  Nombres de personas (también en mayúsculas, con segundo apellido, «de la», y en bloques
+  «Atentamente», «Firma:», «Proyectó:», «Revisó:», «Aprobó:»), cédulas, NIT, teléfonos, correos, radicados, valores en pesos,
+  direcciones (Calle, Carrera, Av., Diagonal, Transversal, AK/AC, apto, torre, barrio,
+  manzana/casa, vereda, km vía...) y cuentas bancarias (cuentas de ahorros y corrientes,
+  bancos colombianos, Nequi/Daviplata, IBAN y tarjetas de crédito/débito).
+
+SOBRE EL PDF
+  En el PDF anonimizado los datos se BORRAN de verdad (no solo se tapan) y se escribe encima
+  el marcador, por ejemplo [PERSONA_1]. También se quitan el autor, el título y otros metadatos.
+  Si la app avisa que un dato "no se pudo borrar dentro del PDF", revísalo y táchalo a mano.
+  Un PDF escaneado (foto) no tiene texto: primero hay que pasarlo por OCR.
+
+LÍMITES (importante)
+  No es infalible. Puede dejar pasar un dato o marcar de más. Revisa siempre el resultado.
+  El mapa (.json) contiene los datos reales: guárdalo solo para ti y no lo compartas.
